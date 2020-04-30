@@ -18,7 +18,7 @@ const Auth = () => {
   const { inputs, handleInputChange, handleSubmit } = useSignUpForm(signup);
 
   return (
-    <main className={styles.wrapper}>
+    <main className={styles.wrapper} data-testid="auth">
       <section className="authWrapper">
         <Header>LOGO TEXT</Header>
         <form className={styles.form} onSubmit={handleSubmit}>
@@ -54,7 +54,7 @@ const Auth = () => {
               />
             </>
           )}
-          <Button>{registration ? 'Register' : 'Log in'}</Button>
+          <Button data-testid="submitButton">{registration ? 'Register' : 'Log in'}</Button>
         </form>
         {registration ? null : (
           <button
@@ -63,6 +63,7 @@ const Auth = () => {
             onClick={() => {
               setRegistration(true);
             }}
+            data-testid="registrationButton"
           >
             Don't have an account?
           </button>

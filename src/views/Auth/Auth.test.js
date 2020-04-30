@@ -1,0 +1,22 @@
+import React from 'react';
+import { render, fireEvent } from '@testing-library/react';
+import Auth from './Auth';
+
+const renderView = (props) => {
+  const utils = render(<Auth {...props} />);
+  const auth = utils.getByTestId('auth');
+  return { ...utils, auth };
+};
+
+describe('Auth view', () => {
+  it('Renders without crashing', () => {
+    const { getByTestId } = renderView();
+    expect(getByTestId('auth')).toBeInTheDocument();
+  });
+  it('Renders two inputs', () => {
+    const { getAllByTestId } = renderView();
+    expect(getAllByTestId('input')).toHaveLength(2);
+  });
+  it('Renders four inputs after click on registration button', () => {});
+  it('Fires submit function after clickin on submit button', () => {});
+});

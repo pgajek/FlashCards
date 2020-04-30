@@ -15,6 +15,7 @@ const Input = ({ name, type, regex, required, value, change }) => {
         required={required}
         value={value}
         onChange={change}
+        data-testid="input"
       />
     </>
   );
