@@ -21,7 +21,7 @@ const Auth = () => {
     <main className={styles.wrapper} data-testid="auth">
       <section className="authWrapper">
         <Header>LOGO TEXT</Header>
-        <form className={styles.form} onSubmit={handleSubmit}>
+        <form data-testid="authForm" className={styles.form} onSubmit={handleSubmit}>
           <Input
             name="Login"
             type="text"

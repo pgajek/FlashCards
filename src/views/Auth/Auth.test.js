@@ -22,6 +22,11 @@ describe('Auth view', () => {
     fireEvent.click(getByTestId('registrationButton'));
     expect(getAllByTestId('input')).toHaveLength(4);
   });
-  it('Fires submit function after clickin on submit button', () => {});
+  it('Fires submit function after clickin on submit button', () => {
+    const { getByTestId } = renderView();
+    const button = getByTestId('submitButton');
+    const onSubmit = jest.fn();
+    const form = getByTestId('authForm');
+  });
   it('Changing route after loging in', () => {});
 });
