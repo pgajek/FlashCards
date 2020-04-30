@@ -17,6 +17,11 @@ describe('Auth view', () => {
     const { getAllByTestId } = renderView();
     expect(getAllByTestId('input')).toHaveLength(2);
   });
-  it('Renders four inputs after click on registration button', () => {});
+  it('Renders four inputs after click on registration button', () => {
+    const { getByTestId, getAllByTestId } = renderView();
+    fireEvent.click(getByTestId('registrationButton'));
+    expect(getAllByTestId('input')).toHaveLength(4);
+  });
   it('Fires submit function after clickin on submit button', () => {});
+  it('Changing route after loging in', () => {});
 });
