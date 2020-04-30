@@ -1,0 +1,21 @@
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 100vw;
+  height: 100vh;
+  background-color: #222222;
+}
+.authWrapper {
+  height: 60%;
+  width: 90%;
+  background-color: #fff;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+}
+.formButton {
+  background-color: #252525;
+}
